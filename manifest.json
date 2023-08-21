@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "TTSExtention",
+  "version": "1.0",
+
+  "description": "An extention designed to read a section of highlighted text ",
+  
+  "icons": {
+    "48": "icons/2 me irl.png"
+  },
+
+  "permissions": ["activeTab", "contextMenus"]
+
+  
+
+}

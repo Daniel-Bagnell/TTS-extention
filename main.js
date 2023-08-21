@@ -1,23 +1,24 @@
-document.body.style.border = "5px solid red";
-
 browser.menus.create(
     {
     id: "reader",
-    title: browser.i18n.getMessage("READ"),
-    contexts: ["all"],
+    title: "READ",
+    contexts: ["selection"],
     },
-     onCreated,
+     
 );
 
-  browser.menus.onClicked( () =>
+  browser.menus.onClicked.addListener(async function (info, tab)
     {
-    getHighlightedText();
+      if (info.menuItemId == "reader") {
+        console.log(getHighlightedText)
+      speak(getHighlightedText(), getVoices, 1, 1, 1);
+      }
     }
 );
 
 function getHighlightedText(){
     text = document.getElementById("highlightedText").innerText = selectText();
-    speak(text, getVoices, 1, 1, 1)
+    return text
    };
 
 

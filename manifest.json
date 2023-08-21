@@ -1,16 +1,15 @@
 {
   "manifest_version": 2,
-  "name": "TTSExtention",
+  "name": "TTS Extention",
   "version": "1.0",
 
   "description": "An extention designed to read a section of highlighted text ",
   
-  "icons": {
-    "48": "icons/2 me irl.png"
-  },
+  "permissions": ["menus"],
 
-  "permissions": ["activeTab", "contextMenus"]
+  "background":{
+    "scripts": ["main.js"]
+  }
 
-  
 
 }
